@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ask me anything</title>
+</head>
+<body ng-app="">
+<div align="center">
+  <table width="993" height="641" border="1">
+    <tr>
+      <td width="983" height="635" background="images/images.jpg" bgcolor="#FFFFFF"><jsp:include page="footer.jsp" flush="true"/>&nbsp;
+      <div align="center">
+      <form action="register.jsp" method="get">
+        <table width="515" height="278" border="0">
+          <tr>
+            <td width="189"><div align="center">Name</div></td>
+            <td width="67"><div align="center">
+              <label for="name"></label>
+              <input type="text" name="name" id="name"  placeholder="Enter Name" style="height:30px; width:300px" autofocus >
+            </div></td>
+          </tr>
+          <tr>
+            <td><div align="center">Email</div></td>
+            <td><div align="center">
+              <label for="email"></label>
+             <!-- <input type="text" name="email" id="email" placeholder="Enter Email" autocomplete="off" style="height:30px; width:300px"/> -->
+             
+             <form name="myForm">
+<input type="email" name="myInput" ng-model="myInput" placeholder="Enter Email" style="height:30px;width:300px"/>
+</form>
+             <input type="hidden" name="email" value={{myForm.myInput.$valid}}>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div align="center">Password</div></td>
+            <td><div align="center">
+              <label for="password"></label>
+              <input type="password" name="password" id="password" placeholder="Enter Password" style="height:30px; width:300px" />
+            </div></td>
+          </tr>
+          <tr>
+            <td><div align="center">Confirm Password</div></td>
+            <td><div align="center">
+              <label for="cpassword"></label>
+              <input type="password" name="cpassword" id="cpassword" placeholder="Confirm your password" style="height:30px; width:300px" />
+            </div></td>
+          </tr>
+          <tr>
+            <td colspan="2"><div align="center">
+              <input type="submit" name="register" id="register" value="Let me In" style="height:30px; width:120px"  />
+            </div></td>
+            </tr>
+        </table>
+        </form>
+      </div></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
